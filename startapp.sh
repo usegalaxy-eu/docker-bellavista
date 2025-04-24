@@ -2,4 +2,5 @@
 
 . /opt/bellavista/bellavista/bin/activate
 
-bellavista "/input/config.json"
+cd "/input"
+bellavista "./config.json"
