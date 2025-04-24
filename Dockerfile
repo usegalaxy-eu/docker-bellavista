@@ -9,6 +9,14 @@ RUN apt-get update -y && \
         ca-certificates \
         libgl1 \
         qt5dxcb-plugin \
+        libxcb-xinerama0 \
+        libxcb-icccm4 \
+        libxcb-image0 \
+        libxcb-keysyms1 \
+        libxcb-randr0 \
+        libxcb-render-util0 \
+        libxcb-xkb1 \
+        libxkbcommon-x11-0 \
         python3 \
         python3-pip \
         python3-venv \
@@ -44,9 +52,7 @@ EXPOSE 5800
 
 # Set the name of the application.
 ENV APP_NAME="bellavista"
-
-ENV KEEP_APP_RUNNING=0
-
+ENV DISPLAY=:0
+ENV QT_DEBUG_PLUGINS=1
+ENV KEEP_APP_RUNNING=1
 ENV TAKE_CONFIG_OWNERSHIP=1
-
-WORKDIR /config
