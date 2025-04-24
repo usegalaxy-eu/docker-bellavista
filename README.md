@@ -23,4 +23,13 @@ docker pull quay.io/bgruening/bellavista:latest
 ```
 
 ## How to use the container
-TBD
+
+```bash
+xhost +local:docker  # allow Docker to access X11
+
+docker run -it \
+  -e DISPLAY=$DISPLAY \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  -v your/input/files:/input/ \
+  CONTAINER_NAME:tag
+```
