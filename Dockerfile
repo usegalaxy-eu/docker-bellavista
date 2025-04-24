@@ -50,6 +50,11 @@ RUN echo '. /opt/bellavista/bellavista/bin/activate' >> /etc/cont-init.d/50-bell
 
 EXPOSE 5800
 
+COPY startapp.sh /startapp.sh
+RUN chmod +x /startapp.sh
+
+ENV APP_COMMAND=/startapp.sh
+
 # Set the name of the application.
 ENV APP_NAME="bellavista"
 ENV DISPLAY=:0
