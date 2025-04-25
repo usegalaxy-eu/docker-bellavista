@@ -1,4 +1,4 @@
-FROM jlesage/baseimage-gui:ubuntu-22.04-v4.4.2 AS build
+FROM jlesage/baseimage-gui:ubuntu-24.04-v4.7.1 AS build
 
 LABEL maintainer="Amirhossein N. Nilchi <nilchia@informatik.uni-freiburg.de>"
 

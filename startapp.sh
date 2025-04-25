@@ -2,5 +2,8 @@
 
 . /opt/bellavista/bellavista/bin/activate
 
-cd "/input"
-bellavista "./config.json"
+if [ -n "${BELLAVISTA_DIR}" ]; then
+    cd "$BELLAVISTA_DIR" && bellavista "./config.json"
+else
+    cd /input && bellavista "./config.json"
+fi
