@@ -31,10 +31,6 @@ RUN mkdir -p /opt/bellavista &&\
 RUN APP_ICON_URL=https://bellavista.readthedocs.io/en/latest/_static/bellavista_logo_favicon.png && \
     install_app_icon.sh "$APP_ICON_URL"
 
-# Set up Python virtual environment as default
-ENV PATH="/opt/bellavista/bellavista/bin:$PATH"
-ENV VIRTUAL_ENV="/opt/bellavista/bellavista"
-
 # Add virtual environment activation to startup
 RUN echo '. /opt/bellavista/bellavista/bin/activate' >> /etc/cont-init.d/50-bellavista-setup.sh && \
     chmod +x /etc/cont-init.d/50-bellavista-setup.sh
