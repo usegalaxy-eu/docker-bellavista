@@ -25,11 +25,11 @@ docker pull quay.io/bgruening/bellavista:latest
 ## How to use the container
 
 ```bash
-xhost +local:docker  # allow Docker to access X11
-
-docker run -it \
-  -e DISPLAY=$DISPLAY \
-  -v /tmp/.X11-unix:/tmp/.X11-unix \
-  -v your/input/files:/input/ \
-  CONTAINER_NAME:tag
+docker run -p 5800:5800 --rm -it -v /host_input/:/input/ CONTAINER_NAME:tag  
 ```
+
+Then you can access the app via: http://localhost:5800/
+
+**NOTE:** all your input files (i.e. images, transcripts, ...) and the config.json file should be mounted to `/input/` directory in the container.
+
+**NOTE:** the `data_folder` argument in the `config.json` should be set to: `"data_folder": "./",`
