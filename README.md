@@ -33,3 +33,7 @@ Then you can access the app via: http://localhost:5800/
 **NOTE:** all your input files (i.e. images, transcripts, ...) and the config.json file should be mounted to `/input/` directory in the container.
 
 **NOTE:** the `data_folder` argument in the `config.json` should be set to: `"data_folder": "./",`
+
+-----
+
+[Link to the Interactive Tool on usegalaxy.eu](https://usegalaxy.eu/?tool_id=interactive_tool_bellavista&version=latest)
