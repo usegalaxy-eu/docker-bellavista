@@ -7,7 +7,7 @@ Docker image with [bellavista](https://github.com/pkosurilab/BellaVista) version
 
 ## How to build the container
 
-To build this container you can use the following command:
+To build this container, you can use the following command:
 
 ```bash
 git clone https://github.com/usegalaxy-eu/docker-bellavista.git
@@ -17,7 +17,7 @@ docker build -t CONTAINER_NAME .
 
 ## How to pull the container from Quay.io
 
-The container is stored on Quay.io and you can get it via:
+The container is stored on Quay.io, and you can get it via:
 
 ```bash
 docker pull quay.io/bgruening/bellavista:latest
@@ -31,10 +31,6 @@ docker run -p 5800:5800 --rm -it -v /host_input/:/input/ CONTAINER_NAME:tag
 
 Then you can access the app via: http://localhost:5800/
 
-**NOTE:** all your input files (i.e. images, transcripts, ...) and the config.json file should be mounted to `/input/` directory in the container.
+**NOTE:** All your input files (e.g., images, transcripts, etc.) and the config.json file should be mounted to the `/input/` directory in the container.
 
 **NOTE:** the `data_folder` argument in the `config.json` should be set to: `"data_folder": "./",`
-
------
-
-[Link to the Interactive Tool on usegalaxy.eu](https://usegalaxy.eu/?tool_id=interactive_tool_bellavista&version=latest)
